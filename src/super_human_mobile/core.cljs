@@ -1,4 +1,5 @@
 (ns super-human-mobile.core
+    (:use-macros [purnam.core :only [def*]])
     (:require [reagent.core :as r :refer [atom]]
               [re-frame.core :refer [subscribe dispatch dispatch-sync]]
               [super-human-mobile.handlers]
@@ -8,11 +9,11 @@
 
 (def firebase (js/require "firebase"))
 
-(def firebase-config
-  #js {:apiKey        "AIzaSyAgafACEe0ZwHnv-Lc-A2Iq3MmQGhuFEHg"
-       :authDomain    "super-human-4913b.firebaseapp.com"
-       :databaseURL   "https://super-human-4913b.firebaseio.com"
-       :storageBucket "super-human-4913b.appspot.com"})
+(def* firebase-config
+  {:apiKey        "AIzaSyAgafACEe0ZwHnv-Lc-A2Iq3MmQGhuFEHg"
+   :authDomain    "super-human-4913b.firebaseapp.com"
+   :databaseURL   "https://super-human-4913b.firebaseio.com"
+   :storageBucket "super-human-4913b.appspot.com"})
 
 (js/firebase.initializeApp firebase-config)
 
