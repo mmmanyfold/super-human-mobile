@@ -14,7 +14,7 @@
       "color": "#000000"
     },
     "loading": {
-      "icon": "https://s3.amazonaws.com/exp-brand-assets/ExponentEmptyManifest_192.png",
+      "icon": "https://s3.amazonaws.com/mmm-statics/mmm-logo-graydient.png",
       "hideExponentText": false
     },
     "packagerOpts": {

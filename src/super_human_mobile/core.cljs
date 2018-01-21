@@ -6,6 +6,16 @@
 
 (def ReactNative (js/require "react-native"))
 
+(def firebase (js/require "firebase"))
+
+(def firebase-config
+  #js {:apiKey        "AIzaSyAgafACEe0ZwHnv-Lc-A2Iq3MmQGhuFEHg"
+       :authDomain    "super-human-4913b.firebaseapp.com"
+       :databaseURL   "https://super-human-4913b.firebaseio.com"
+       :storageBucket "super-human-4913b.appspot.com"})
+
+(js/firebase.initializeApp firebase-config)
+
 (def app-registry (.-AppRegistry ReactNative))
 (def text (r/adapt-react-class (.-Text ReactNative)))
 (def view (r/adapt-react-class (.-View ReactNative)))
